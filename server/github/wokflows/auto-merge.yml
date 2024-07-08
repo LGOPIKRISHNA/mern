@@ -9,7 +9,9 @@ jobs:
     runs-on:ubuntu-latest
   steps:
     - name: Checkout the repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        token: ${{secrets.Actions_pat}}
     -name: Configure Git
       run:  |
         git config --global user.name "lgopikrishna"
@@ -19,8 +21,5 @@ jobs:
     - name: Merge main into testing
         run: |
           git checkout testing
-          git merge main --allow-unrelated-histories
+          git merge -x theirs main --allow-unrelated-histories
           git push origin testing
-
-
-
