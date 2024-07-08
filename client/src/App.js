@@ -34,10 +34,11 @@ export default App; //export the function outside the file
 
 import React from 'react';
 import { AppProvider } from './component/AppContext';
-import Register from './Register';
-import Login from './Login';
-import Dashboard from './Dashboard';
-import TodoList from './TodoList';
+import Register from './component/Register';
+import Login from './component/Login';
+import Dashboard from './DashBoard';
+import TodoList from './component/ToDoList';
+// import Header from './component/header';
 
 function App() {
   return (
