@@ -220,6 +220,10 @@ async function StartServer(){
    })
 }
 
+function testing(){
+   return 0;
+}
+
 StartServer();
 
 
